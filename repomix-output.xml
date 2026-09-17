@@ -1,0 +1,2411 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+client/
+  public/
+    vite.svg
+  src/
+    assets/
+      react.svg
+    components/
+      LoginModal.jsx
+    hooks/
+      useGetCurrentUser.jsx
+    pages/
+      Dashboard.jsx
+      Editor.jsx
+      Generate.jsx
+      Home.jsx
+      LiveSite.jsx
+      Pricing.jsx
+    redux/
+      store.js
+      userSlice.js
+    App.jsx
+    firebase.js
+    index.css
+    main.jsx
+  .gitignore
+  eslint.config.js
+  index.html
+  package.json
+  README.md
+  vite.config.js
+server/
+  config/
+    db.js
+    openRouter.js
+    plan.js
+    stripe.js
+  controllers/
+    auth.controller.js
+    billing.controller.js
+    stripeWebhook.controller.js
+    user.controllers.js
+    website.controllers.js
+  middlewares/
+    isAuth.js
+  models/
+    user.model.js
+    website.model.js
+  routes/
+    auth.routes.js
+    billing.routes.js
+    user.routes.js
+    website.routes.js
+  utils/
+    extractJson.js
+  .gitignore
+  index.js
+  package.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="client/public/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+</file>
+
+<file path="client/src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="client/src/components/LoginModal.jsx">
+import React from 'react'
+import { AnimatePresence, motion } from "motion/react"
+import { signInWithPopup } from 'firebase/auth'
+import { auth, provider } from '../firebase'
+import axios from "axios"
+import { serverUrl } from '../App'
+import { useDispatch } from 'react-redux'
+import { setUserData } from '../redux/userSlice'
+function LoginModal({ open, onClose }) {
+const dispatch=useDispatch()
+    const handleGoogleAuth=async ()=>{
+        try {
+            const result=await signInWithPopup(auth,provider)
+            const {data}=await axios.post(`${serverUrl}/api/auth/google`,{
+                name:result.user.displayName,
+                email:result.user.email,
+                avatar:result.user.photoURL
+            },{withCredentials:true})
+            dispatch(setUserData(data))
+            onClose()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    return (
+        <AnimatePresence>
+            {open &&
+                <motion.div
+                    className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-xl px-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={onClose}
+                >
+
+                    <motion.div
+                        initial={{ scale: 0.88, opacity: 0, y: 60 }}
+                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        exit={{ scale: 0.9, opacity: 0, y: 40 }}
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                        className="relative w-full max-w-md p-[1px] rounded-3xl bg-gradient-to-br from-purple-500/40 via-blue-500/30 to-transparent"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className='relative rounded-3xl bg-[#0b0b0b] border border-white/10 shadow-[0_30px_120px_rgba(0,0,0,0.8)] overflow-hidden' >
+                            <motion.div
+                                animate={{ opacity: [0.25, 0.4, 0.25] }}
+                                transition={{ duration: 6, repeat: Infinity }}
+                                className="absolute -top-32 -left-32 w-80 h-80 bg-purple-500/30 blur-[140px]"
+                            />
+                            <motion.div
+                                animate={{ opacity: [0.2, 0.35, 0.2] }}
+                                transition={{ duration: 6, repeat: Infinity, delay: 2 }}
+                                className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-500/25 blur-[140px]"
+                            />
+
+                            <button
+                                className='absolute top-5 right-5 z-20 text-zinc-400 hover:text-white transition text-lg'
+                                onClick={onClose}
+                            >
+                                X
+                            </button>
+
+
+                            <div className='relative px-8 pt-14 pb-10 text-center'>
+                                <h1 className='inline-block mb-6 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-zinc-300'> AI-powered website builder </h1>
+                                <h2 className='text-3xl font-semibold leading-tight mb-3 space-x-2'>
+                                    <span >Welcome to</span>
+                                    <span className='bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>GenWeb.ai</span>
+                                </h2>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.04 }}
+                                    whileTap={{ scale: 0.96 }}
+                                    onClick={handleGoogleAuth}
+                                    className="group relative w-full h-13 rounded-xl bg-white text-black font-semibold shadow-xl overflow-hidden"
+                                >
+
+                                    <div className='relative flex items-center justify-center gap-3'>
+                                        <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" alt="" className='h-5 w-5' />
+                                        Continue with Google
+                                    </div>
+
+                                </motion.button>
+
+                                <div className='flex items-center gap-4 my-10'>
+                                    <div className='h-px flex-1 bg-white/10' />
+                                    <span className='text-xs text-zinc-500 tracking-wide'>Secure Login</span>
+                                    <div className='h-px flex-1 bg-white/10' />
+                                </div>
+
+                                <p className='text-xs text-zinc-500 leading-relaxed'>
+                                    By continuing, you agree to our{" "}
+                                    <span className="underline cursor-pointer hover:text-zinc-300">
+                                        Terms of Service
+                                    </span>{" "}
+                                    and{" "}
+                                    <span className="underline cursor-pointer hover:text-zinc-300">
+                                        Privacy Policy
+                                    </span>.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </motion.div>
+
+                </motion.div>}
+        </AnimatePresence>
+    )
+}
+
+export default LoginModal
+</file>
+
+<file path="client/src/hooks/useGetCurrentUser.jsx">
+import axios from 'axios'
+import React from 'react'
+import { useEffect } from 'react'
+import { serverUrl } from '../App'
+import { useDispatch } from 'react-redux'
+import { setUserData } from '../redux/userSlice'
+
+function useGetCurrentUser() {
+    const dispatch=useDispatch()
+    useEffect(() => {
+        const getCurrentUser = async () => {
+            try {
+              const result=await axios.get(`${serverUrl}/api/user/me`,{withCredentials:true})
+              dispatch(setUserData(result.data))
+            } catch (error) {
+console.log(error)
+            }
+        }
+        getCurrentUser()
+    }, [])
+}
+
+export default useGetCurrentUser
+</file>
+
+<file path="client/src/pages/Dashboard.jsx">
+import { ArrowLeft, Check, Rocket, Share2 } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
+import { motion } from "motion/react"
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { serverUrl } from '../App'
+function Dashboard() {
+    const { userData } = useSelector(state => state.user)
+    const navigate = useNavigate()
+    const [websites, setWebsites] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
+    const [copiedId, setCopiedId] = useState(null)
+    const handleDeploy = async (id) => {
+        try {
+            const result = await axios.get(`${serverUrl}/api/website/deploy/${id}`, { withCredentials: true })
+            window.open(`${result.data.url}`, "_blank")
+            setWebsites((prev) =>
+        prev.map((w) =>
+          w._id === id
+            ? { ...w, deployed: true, deployUrl: result.data.url }
+            : w
+        )
+      );
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        const handleGetAllWebsites = async () => {
+            setLoading(true)
+            try {
+
+                const result = await axios.get(`${serverUrl}/api/website/get-all`, { withCredentials: true })
+                setWebsites(result.data || [])
+                setLoading(false)
+            } catch (error) {
+                console.log(error)
+                setError(error.response.data.message)
+                setLoading(false)
+            }
+        }
+        handleGetAllWebsites()
+    }, [])
+
+    const handleCopy = async (site) => {
+        await navigator.clipboard.writeText(site.deployUrl)
+        setCopiedId(site._id)
+        setTimeout(() => setCopiedId(null), 2000)
+    }
+
+    return (
+        <div className='min-h-screen bg-[#050505] text-white'>
+            <div className='sticky top-0 z-40 backdrop-blur-xl bg-black/50 border-b border-white/10'>
+                <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
+                    <div className='flex items-center gap-4'>
+                        <button className='p-2 rounded-lg hover:bg-white/10 transition' onClick={() => navigate("/")}><ArrowLeft size={16} /></button>
+                        <h1 className='text-lg font-semibold'>Dashboard</h1>
+                    </div>
+                    <button className='px-4 py-2 rounded-lg bg-white text-black text-sm font-semibold hover:scale-105 transition' onClick={() => navigate("/generate")}>
+                        + New Website
+                    </button>
+                </div>
+            </div>
+            <div className='max-w-7xl mx-auto px-6 py-10'>
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-10"
+                >
+                    <p className='text-sm text-zinc-400 mb-1'>Welcome Back</p>
+                    <h1 className='text-3xl font-bold'>{userData.name}</h1>
+                </motion.div>
+
+                {loading && (
+                    <div className="mt-24 text-center text-zinc-400">Loading Your Websites...</div>
+                )}
+
+                {error && !loading && (
+                    <div className="mt-24 text-center text-red-400">{error}</div>
+                )}
+
+                {websites?.length == 0 && (
+                    <div className="mt-24 text-center text-zinc-400">You have no websites</div>
+                )}
+
+                {!loading && !error && websites?.length > 0 && (
+                    <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8'>
+                        {websites.map((w, i) => {
+
+                            const copied = copiedId === w._id
+
+                            return <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.05 }}
+                                whileHover={{ y: -6 }}
+                               
+                                className="rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:bg-white/10 transition flex flex-col"
+                            >
+                                <div className='relative h-40 bg-black cursor-pointer'  onClick={()=>navigate(`/editor/${w._id}`)}>
+                                    <iframe srcDoc={w.latestCode} className='absolute inset-0 w-[140%] h-[140%] scale-[0.72] origin-top-left pointer-events-none bg-white' />
+                                    <div className='absolute inset-0 bg-black/30' />
+                                </div>
+
+                                <div className='p-5 flex flex-col gap-4 flex-1'>
+                                    <h3 className='text-base font-semibold line-clamp-2'>{w.title}</h3>
+                                    <p className='text-xs text-zinc-400'>Last Updated {""}
+                                        {new Date(w.updatedAt).toLocaleDateString()}
+                                    </p>
+
+                                    {!w.deployed ? (
+                                        <button className=" mt-auto flex items-center justify-center gap-2
+                          px-4 py-2 rounded-xl text-sm font-semibold
+                          bg-gradient-to-r from-indigo-500 to-purple-500
+                          hover:scale-105 transition
+                        "
+                                            onClick={() => handleDeploy(w._id)}
+
+                                        ><Rocket size={18} /> Deploy</button>
+                                    ) : (<motion.button
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={() => handleCopy(w)}
+                                        className={`
+                          mt-auto flex items-center justify-center gap-2
+                          px-4 py-2 rounded-xl text-sm font-medium
+                          transition-all
+                          ${copied
+                                                ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                                                : "bg-white/10 hover:bg-white/20 border border-white/10"
+                                            }
+                        `}
+                                    >
+                                        { copied?(
+                                            <>
+                                            <Check size={14}/>
+                                            Link Copied
+                                            </>
+                                        ):
+                                        <>
+                                        <Share2 size={14}/>
+                                        Share Link
+                                        </>
+                                        }
+                                    </motion.button>)}
+
+                                </div>
+
+                            </motion.div>
+                        })}
+
+                    </div>
+                )}
+
+
+            </div>
+        </div>
+    )
+}
+
+export default Dashboard
+</file>
+
+<file path="client/src/pages/Editor.jsx">
+import axios from 'axios'
+import React from 'react'
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { serverUrl } from '../App'
+import { useState } from 'react'
+import { ArrowLeft, Code, Code2, MessageCircle, MessageSquare, Monitor, Rocket, Send, X } from 'lucide-react'
+import { useRef } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
+
+import Editor from '@monaco-editor/react';
+function WebsiteEditor() {
+    const { id } = useParams()
+    const [website, setWebsite] = useState(null)
+    const [error, setError] = useState("")
+    const [code, setCode] = useState("")
+    const [messages, setMessages] = useState([])
+    const [prompt, setPrompt] = useState("")
+    const iframeRef = useRef(null)
+    const [updateLoading, setUpdateLoading] = useState(false)
+    const [thinkingIndex, setThinkingIndex] = useState(0)
+    const [showCode, setShowCode] = useState(false)
+    const [showFullPreview, setShowFullPreview] = useState(false)
+    const [showChat, setShowChat] = useState(false)
+    const thinkingSteps = [
+        "Understanding your request…",
+        "Planning layout changes…",
+        "Improving responsiveness…",
+        "Applying animations…",
+        "Finalizing update…",
+    ]
+    const handleUpdate = async () => {
+        if (!prompt) return
+        setUpdateLoading(true)
+        const text = prompt
+        setPrompt("")
+        setMessages((m) => [...m, { role: "user", content: prompt }])
+        try {
+            const result = await axios.post(`${serverUrl}/api/website/update/${id}`, { prompt: text }, { withCredentials: true })
+            console.log(result)
+            setUpdateLoading(false)
+            setMessages((m) => [...m, { role: "ai", content: result.data.message }])
+            setCode(result.data.code)
+        } catch (error) {
+            setUpdateLoading(false)
+            console.log(error)
+        }
+    }
+
+    const handleDeploy = async () => {
+            try {
+                const result = await axios.get(`${serverUrl}/api/website/deploy/${website._id}`, { withCredentials: true })
+                window.open(`${result.data.url}`, "_blank")
+               
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+
+    useEffect(() => {
+        if (!updateLoading) return;
+        const i = setInterval(() => {
+            setThinkingIndex((i) => (i + 1) % thinkingSteps.length)
+        }, 1200)
+
+        return () => clearInterval(i)
+    }, [updateLoading])
+
+    useEffect(() => {
+        const handleGetWebsite = async () => {
+            try {
+                const result = await axios.get(`${serverUrl}/api/website/get-by-id/${id}`, { withCredentials: true })
+                setWebsite(result.data)
+                setCode(result.data.latestCode)
+                setMessages(result.data.conversation)
+            } catch (error) {
+                console.log(error)
+                setError(error.response.data.message)
+            }
+        }
+        handleGetWebsite()
+    }, [id])
+
+
+    useEffect(() => {
+        if (!iframeRef.current || !code) return;
+        const blob = new Blob([code], { type: "text/html" })
+        const url = URL.createObjectURL(blob)
+        iframeRef.current.src = url
+        return () => URL.revokeObjectURL(url)
+    }, [code])
+
+    if (error) {
+        return (
+            <div className='h-screen flex items-center justify-center bg-black text-red-400'>
+                {error}
+            </div>
+        )
+    }
+    if (!website) {
+        return (
+            <div className='h-screen flex items-center justify-center bg-black text-white'>
+                Loading...
+            </div>
+        )
+    }
+
+
+
+    return (
+        <div className='h-screen w-screen flex bg-black text-white overflow-hidden'>
+            <aside className='hidden lg:flex w-95 flex-col border-r border-white/10 bg-black/80'>
+                <Header />
+                <>
+                    <div className='flex-1 overflow-y-auto px-4 py-4 space-y-4'>
+                        {messages.map((m, i) => (
+                            <div
+                                key={i}
+                                className={`max-w-[85%] ${m.role === "user" ? "ml-auto" : "mr-auto"
+                                    }`}
+                            >
+
+                                <div
+                                    className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${m.role === "user"
+                                        ? "bg-white text-black"
+                                        : "bg-white/5 border border-white/10 text-zinc-200"
+                                        }`}
+                                >
+
+                                    {m.content}
+
+                                </div>
+
+                            </div>
+                        ))}
+
+                        {updateLoading &&
+
+                            <div className='max-w-[85%] mr-auto'>
+                                <div className='px-4 py-2.5 rounded-2xl text-xs bg-white/5 border border-white/10 text-zinc-400 italic'>{thinkingSteps[thinkingIndex]}</div>
+                            </div>}
+
+
+
+
+                    </div>
+                    <div className='p-3 border-t border-white/10'>
+                        <div className='flex gap-2'>
+                            <input placeholder='Describe Changes...' className='flex-1 resize-none rounded-2xl px-4 py-3 bg-white/5 border border-white/10 text-sm outline-none' onChange={(e) => setPrompt(e.target.value)} value={prompt} />
+                            <button className='px-4 py-3 rounded-2xl bg-white text-black' disabled={updateLoading} onClick={handleUpdate}><Send size={14} /></button>
+                        </div>
+                    </div>
+
+                </>
+            </aside>
+
+            <div className='flex-1 flex flex-col'>
+                <div className='h-14 px-4 flex justify-between items-center border-b border-white/10 bg-black/80'>
+                    <span className='text-xs text-zinc-400'>Live Preview</span>
+                    <div className='flex gap-2'>
+                        {website.deployed ?"": <button className='flex items-center gap-2 px-4 py-1.5 rounded-lg bg-linear-to-r from-indigo-500 to-purple-500 text-sm font-semibold hover:scale-105 transition'
+                        onClick={handleDeploy}
+                        ><Rocket size={14} /> Deploy</button>}
+                       
+                        <button className='p-2 lg:hidden' onClick={() => setShowChat(true)}><MessageSquare size={18} /></button>
+
+                        <button className='p-2' onClick={() => setShowCode(true)}><Code2 size={18} /></button>
+                        <button className='p-2' onClick={() => setShowFullPreview(true)}><Monitor size={18} /></button>
+                    </div>
+
+                </div>
+
+                <iframe ref={iframeRef} sandbox='allow-scripts allow-same-origin allow-forms' className='flex-1 w-full bg-white' />
+            </div>
+
+            <AnimatePresence>
+                {showChat && (
+                    <motion.div
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        exit={{ y: "100%" }}
+                        className="fixed inset-0 z-[9999] bg-black flex flex-col"
+                    >
+                   <Header onclose={()=>setShowChat(false)}/>
+                   <>
+                    <div className='flex-1 overflow-y-auto px-4 py-4 space-y-4'>
+                        {messages.map((m, i) => (
+                            <div
+                                key={i}
+                                className={`max-w-[85%] ${m.role === "user" ? "ml-auto" : "mr-auto"
+                                    }`}
+                            >
+
+                                <div
+                                    className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${m.role === "user"
+                                        ? "bg-white text-black"
+                                        : "bg-white/5 border border-white/10 text-zinc-200"
+                                        }`}
+                                >
+
+                                    {m.content}
+
+                                </div>
+
+                            </div>
+                        ))}
+
+                        {updateLoading &&
+
+                            <div className='max-w-[85%] mr-auto'>
+                                <div className='px-4 py-2.5 rounded-2xl text-xs bg-white/5 border border-white/10 text-zinc-400 italic'>{thinkingSteps[thinkingIndex]}</div>
+                            </div>}
+
+
+
+
+                    </div>
+                    <div className='p-3 border-t border-white/10'>
+                        <div className='flex gap-2'>
+                            <input placeholder='Describe Changes...' className='flex-1 resize-none rounded-2xl px-4 py-3 bg-white/5 border border-white/10 text-sm outline-none' onChange={(e) => setPrompt(e.target.value)} value={prompt} />
+                            <button className='px-4 py-3 rounded-2xl bg-white text-black' disabled={updateLoading} onClick={handleUpdate}><Send size={14} /></button>
+                        </div>
+                    </div>
+
+                </>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+
+            <AnimatePresence>
+                {showCode && (
+                    <motion.div
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        className="fixed inset-y-0 right-0 w-full lg:w-[45%] z-[9999] bg-[#1e1e1e] flex flex-col"
+                    >
+                        <div className='h-12 px-4 flex justify-between items-center border-b border-white/10 bg-[#1e1e1e]'>
+                            <span className='text-sm font-medium'>index.html</span>
+                            <button onClick={() => setShowCode(false)}><X size={18} /></button>
+                        </div>
+                        <Editor
+                            theme='vs-dark'
+                            value={code}
+                            language='html'
+                            onChange={(v) => setCode(v)}
+                        />
+
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {showFullPreview && (
+                    <motion.div
+                        className="fixed inset-0 z-[9999] bg-black"
+                    >
+                        <iframe className='w-full h-full bg-white' srcDoc={code} sandbox='allow-scripts allow-same-origin allow-forms'/>
+                        <button onClick={() => setShowFullPreview(false)} className='absolute top-4 right-4 p-2 bg-black/70 rounded-lg'><X /></button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+
+        </div>
+    )
+
+    function Header({onclose}) {
+        return (
+            <div className='h-14 px-4 flex items-center justify-between border-b border-white/10'>
+                <span className='font-semibold truncate'>{website.title}</span>
+                {onclose &&  <button onClick={onclose}><X size={18} color='white'/></button>}
+           
+            </div>
+        )
+    }
+
+
+
+}
+
+
+
+
+
+export default WebsiteEditor
+</file>
+
+<file path="client/src/pages/Generate.jsx">
+import { ArrowLeft } from 'lucide-react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { motion } from "motion/react"
+import { useState } from 'react'
+import axios from "axios"
+import { serverUrl } from '../App'
+
+const PHASES = [
+    "Analyzing your idea…",
+    "Designing layout & structure…",
+    "Writing HTML & CSS…",
+    "Adding animations & interactions…",
+    "Final quality checks…",
+];
+function Generate() {
+    const navigate = useNavigate()
+    const [prompt, setPrompt] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [progress, setProgress] = useState(0)
+    const [phaseIndex, setPhaseIndex] = useState(0)
+    const [error,setError]=useState("")
+    const handleGenerateWebsite = async () => {
+        setLoading(true)
+        try {
+            const result = await axios.post(`${serverUrl}/api/website/generate`, { prompt }, { withCredentials: true })
+            console.log(result)
+            setProgress(100)
+            setLoading(false)
+            navigate(`/editor/${result.data.websiteId}`)
+        } catch (error) {
+            setLoading(false)
+            setError(error.response.data.message || "something went wrong")
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        if (!loading) {
+            setPhaseIndex(0)
+            setProgress(0)
+            return
+        }
+
+        let value = 0
+        let phase = 0
+
+        const interval = setInterval(() => {
+            const increment = value < 20
+                ? Math.random() * 1.5
+                : value < 60
+                    ? Math.random() * 1.2
+                    : Math.random() * 0.6;
+            value += increment
+
+            if (value >= 93) value = 93;
+
+            phase = Math.min(
+                Math.floor((value / 100) * PHASES.length), PHASES.length - 1
+            )
+
+            setProgress(Math.floor(value))
+            setPhaseIndex(phase)
+
+        }, 1200)
+
+        return () => clearInterval(interval)
+    }, [loading])
+
+    return (
+        <div className='min-h-screen bg-linear-to-br from-[#050505] via-[#0b0b0b] to-[#050505] text-white'>
+            <div className='sticky top-0 z-40 backdrop-blur-xl bg-black/50 border-b border-white/10'>
+                <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
+                    <div className='flex items-center gap-4'>
+                        <button className='p-2 rounded-lg hover:bg-white/10 transition' onClick={() => navigate("/")}><ArrowLeft size={16} /></button>
+                        <h1 className='text-lg font-semibold'>Genweb<span className='text-zinc-400'>.ai</span></h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className='max-w-6xl mx-auto px-6 py-16'>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-center mb-16"
+                >
+                    <h1 className='text-4xl md:text-5xl font-bold mb-5 leading-tight'>
+                        Build Websites with
+                        <span className='block bg-linear-to-r from-white to-zinc-400 bg-clip-text text-transparent'>Real AI Power</span>
+                    </h1>
+                    <p className='text-zinc-400 max-w-2xl mx-auto'>
+                        This process may take several minutes.
+                        genweb.ai focuses on quality, not shortcuts.
+                    </p>
+
+                </motion.div>
+                <div className='mb-14'>
+                    <h1 className='text-xl font-semibold mb-2'>Describe your website</h1>
+                    <div className='relative'>
+                        <textarea
+                            onChange={(e) => setPrompt(e.target.value)}
+                            value={prompt}
+                            placeholder='Describe your website in detail...'
+                            className='w-full h-56 p-6 rounded-3xl bg-black/60 border border-white/10 outline-none resize-none text-sm leading-relaxed focus:ring-2 focus:ring-white/20'></textarea>
+                    </div>
+                    
+
+                    {error && <p className='mt-4 text-sm text-red-400'>{error}</p>}
+
+                </div>
+                <div className='flex justify-center'>
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.96 }}
+                        onClick={handleGenerateWebsite}
+                        disabled={!prompt.trim() && loading}
+                        className={`px-14 py-4 rounded-2xl font-semibold text-lg ${prompt.trim() && !loading
+                            ? "bg-white text-black"
+                            : "bg-white/20 text-zinc-400 cursor-not-allowed"
+                            }`}
+                    >
+                        Generate Website
+                    </motion.button>
+                </div>
+
+
+                {loading && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="max-w-xl mx-auto mt-12"
+                    >
+                        <div className='flex justify-between mb-2 text-xs text-zinc-400'>
+                            <span >{PHASES[phaseIndex]}</span>
+                            <span >{progress}%</span>
+                        </div>
+
+                        <div className='h-2 w-full bg-white/10 rounded-full overflow-hidden'>
+                            <motion.div
+                                className="h-full bg-linear-to-r from-white to-zinc-300"
+                                animate={{ width: `${progress}%` }}
+                                transition={{ ease: "easeOut", duration: 0.8 }}
+                            />
+                        </div>
+
+                        <div className='text-center text-xs text-zinc-400 mt-4'>
+                            Estimated time remaining:{" "}
+                            <span className="text-white font-medium">
+                                ~8–12 minutes
+                            </span>
+                        </div>
+
+                    </motion.div>
+                )}
+
+
+            </div>
+        </div>
+    )
+}
+
+export default Generate
+</file>
+
+<file path="client/src/pages/Home.jsx">
+import React, { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from "motion/react"
+import LoginModal from '../components/LoginModal'
+import { useDispatch, useSelector } from 'react-redux'
+import { Coins } from "lucide-react"
+import { serverUrl } from '../App'
+import axios from 'axios'
+import { setUserData } from '../redux/userSlice'
+import { useNavigate } from 'react-router-dom'
+function Home() {
+
+    const highlights = [
+        "AI Generated Code",
+        "Fully Responsive Layouts",
+        "Production Ready Output",
+    ]
+
+    const [openLogin, setOpenLogin] = useState(false)
+    const { userData } = useSelector(state => state.user)
+    const [openProfile, setOpenProfile] = useState(false)
+    const [websites, setWebsites] = useState(null)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const handleLogOut = async () => {
+        console.log("logout click")
+        try {
+            await axios.get(`${serverUrl}/api/auth/logout`, { withCredentials: true })
+            dispatch(setUserData(null))
+            setOpenProfile(false)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        if (!userData) return;
+        const handleGetAllWebsites = async () => {
+
+            try {
+
+                const result = await axios.get(`${serverUrl}/api/website/get-all`, { withCredentials: true })
+                setWebsites(result.data || [])
+
+            } catch (error) {
+                console.log(error)
+
+            }
+        }
+        handleGetAllWebsites()
+    }, [userData])
+    return (
+        <div className='relative min-h-screen bg-[#040404] text-white overflow-hidden'>
+            <motion.div
+                initial={{ y: -40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className='fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/40 border-b border-white/10'
+            >
+                <div className='max-w-7xl mx-auto px-6 py-4 flex justify-between items-center'>
+                    <div className='text-lg font-semibold'>
+                        GenWeb.ai
+                    </div>
+                    <div className='flex items-center gap-5'>
+                        <div className='hidden md:inline text-sm text-zinc-400 hover:text-white cursor-pointer' onClick={() => navigate("/pricing")}>
+                            Pricing
+                        </div>
+                        {userData && <div className='hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm cursor-pointer hover:bg-white/10 transition' onClick={() => navigate("/pricing")}>
+                            <Coins size={14} className='text-yellow-400' />
+                            <span className='text-zinc-300'>Credits</span>
+                            <span>{userData.credits}</span>
+                            <span className='font-semibold'>+</span>
+                        </div>}
+
+
+                        {!userData ? <button className='px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 text-sm'
+                            onClick={() => setOpenLogin(true)}
+                        >
+
+                            
+
+                            Get Started
+                        </button>
+                            :
+                            <div className='relative'>
+                                <button className='flex items-center' onClick={() => setOpenProfile(!openProfile)}>
+                                    <img src={userData?.avatar || `https://ui-avatars.com/api/?name=${userData.name}`} alt="" referrerPolicy='no-referrer' className='w-9 h-9 rounded-full border border-white/20 object-cover' />
+                                </button>
+                                <AnimatePresence>
+                                    {openProfile && (
+                                        <>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                                                className="absolute right-0 mt-3 w-60 z-50 rounded-xl bg-[#0b0b0b] border border-white/10 shadow-2xl overflow-hidden"
+                                            >
+                                                <div className='px-4 py-3 border-b border-white/10'>
+                                                    <p className='text-sm font-medium truncate'>{userData.name}</p>
+                                                    <p className='text-xs text-zinc-500 truncate'>{userData.email}</p>
+                                                </div>
+
+                                                <button className='md:hidden w-full px-4 py-3 flex items-center gap-2 text-sm border-b border-white/10 hover:bg-white/5'>
+                                                    <Coins size={14} className='text-yellow-400' />
+                                                    <span className='text-zinc-300'>Credits</span>
+                                                    <span>{userData.credits}</span>
+                                                    <span className='font-semibold'>+</span>
+                                                </button>
+
+                                                <button className='w-full px-4 py-3 text-left text-sm hover:bg-white/5' onClick={() => navigate("/dashboard")}>Dashboard</button>
+                                                <button className='w-full px-4 py-3 text-left text-sm text-red-400 hover:bg-white/5' onClick={handleLogOut}>Logout</button>
+
+                                            </motion.div>
+                                        </>
+
+                                    )}
+
+                                </AnimatePresence>
+
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </motion.div>
+
+            <section className='pt-44 pb-32 px-6 text-center'>
+                <motion.h1
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-5xl md:text-7xl font-bold tracking-tight"
+                >
+                    Build Stunning Websites <br />
+                    <span className='bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>with AI</span>
+                </motion.h1>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className='mt-8 max-w-2xl mx-auto text-zinc-400 text-lg'
+                >
+                    Describe your idea and let AI generate a modern,
+                    responsive, production-ready website.
+                </motion.p>
+
+
+                <button className="px-10 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition mt-12" onClick={() =>userData? navigate("/dashboard"):setOpenLogin(true)}>{userData ? "Go to dashboard" : "Get Started"}</button>
+
+            </section>
+            {!userData && <section className='max-w-7xl mx-auto px-6 pb-32'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                    {highlights.map((h, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className="rounded-2xl bg-white/5 border border-white/10 p-8"
+                        >
+                            <h1 className='text-xl font-semibold mb-3'>{h}</h1>
+                            <p className='text-sm text-zinc-400'>
+                                GenWeb.ai builds real websites — clean code,
+                                animations, responsiveness and scalable structure.
+                            </p>
+
+                        </motion.div>
+                    ))}
+                </div>
+            </section>}
+
+
+            {userData && websites?.length > 0 && (
+                <section className='max-w-7xl mx-auto px-6 pb-32'>
+                    <h3 className='text-2xl font-semibold mb-6'>Your Websites</h3>
+
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                        {websites.slice(0, 3).map((w, i) => (
+                            <motion.div
+                                key={w._id}
+                                whileHover={{ y: -6 }}
+                                onClick={() => navigate(`/editor/${w._id}`)}
+                                className="cursor-pointer rounded-2xl bg-white/5 border border-white/10 overflow-hidden"
+                            >
+                                <div className='h-40 bg-black'>
+                                    <iframe
+                                        srcDoc={w.latestCode}
+                                        className='w-[140%] h-[140%] scale-[0.72] origin-top-left pointer-events-none bg-white'
+                                    />
+                                </div>
+                                <div className='p-4'>
+                                    <h3 className='text-base font-semibold line-clamp-2'>{w.title}</h3>
+                                    <p className='text-xs text-zinc-400'>Last Updated {""}
+                                        {new Date(w.updatedAt).toLocaleDateString()}
+                                    </p>
+                                </div>
+
+
+                            </motion.div>
+                        ))}
+
+                    </div>
+                </section>
+
+            )}
+
+
+
+            <footer className='border-t border-white/10 py-10 text-center text-sm text-zinc-500'>
+                &copy; {new Date().getFullYear()} GenWeb.ai
+            </footer>
+
+            {openLogin && <LoginModal open={openLogin} onClose={() => setOpenLogin(false)} />}
+
+        </div>
+    )
+}
+
+export default Home
+</file>
+
+<file path="client/src/pages/LiveSite.jsx">
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { serverUrl } from '../App'
+import axios from 'axios'
+
+function LiveSite() {
+    const {id}=useParams()
+    const [html,setHtml]=useState("")
+    const [error,setError]=useState("")
+    useEffect(() => {
+        const handleGetWebsite = async () => {
+            try {
+                const result = await axios.get(`${serverUrl}/api/website/get-by-slug/${id}`)
+               setHtml(result.data.latestCode)
+            } catch (error) {
+                console.log(error)
+                setError("site not found")
+            }
+        }
+        handleGetWebsite()
+    }, [id])
+
+if(error){
+    return (
+        <div className='h-screen flex items-center justify-center bg-black text-white'>
+            {error}
+        </div>
+    )
+}
+  return (
+    <iframe title='Live Site' srcDoc={html} className='w-screen h-screen border-none' sandbox='allow-scripts allow-same-origin allow-forms'/>
+  )
+}
+
+export default LiveSite
+</file>
+
+<file path="client/src/pages/Pricing.jsx">
+import { ArrowLeft, Check, Coins } from 'lucide-react';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
+import { motion } from "motion/react"
+import { useSelector } from 'react-redux';
+import axios from 'axios';
+import { serverUrl } from '../App';
+const plans = [
+    {
+        key: "free",
+        name: "Free",
+        price: "₹0",
+        credits: 100,
+        description: "Perfect to explore GenWeb.ai",
+        features: [
+            "AI website generation",
+            "Responsive HTML output",
+            "Basic animations",
+        ],
+        popular: false,
+        button: "Get Started",
+    },
+    {
+        key: "pro",
+        name: "Pro",
+        price: "₹499",
+        credits: 500,
+        description: "For serious creators & freelancers",
+        features: [
+            "Everything in Free",
+            "Faster generation",
+            "Edit & regenerate",
+        ],
+        popular: true,
+        button: "Upgrade to Pro",
+    },
+    {
+        key: "enterprise",
+        name: "Enterprise",
+        price: "₹1499",
+        credits: 1000,
+        description: "For teams & power users",
+        features: [
+            "Unlimited iterations",
+            "Highest priority",
+            "Team collaboration",
+            "Dedicated support",
+        ],
+        popular: false,
+        button: "Contact Sales",
+    },
+];
+function Pricing() {
+    const navigate = useNavigate()
+  const {userData}=useSelector(state=>state.user)
+  const [loading,setLoading]=useState(null)
+    const handleBuy=async (planKey)=>{
+if(!userData){
+navigate("/")
+return
+}
+if(planKey=="free"){
+    navigate("/dashboard")
+    return
+}
+setLoading(planKey)
+try {
+    const result=await axios.post(`${serverUrl}/api/billing`,{planType:planKey},{withCredentials:true})
+    window.location.href=result.data.sessionUrl
+} catch (error) {
+    console.log(error)
+    setLoading(null)
+}
+
+    }
+    return (
+        <div className='relative min-h-screen overflow-hidden bg-[#050505] text-white px-6 pt-16 pb-24'>
+
+            <div className='absolute inset-0 pointer-events-none'>
+                <div className='absolute -top-40 -left-40 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px]' />
+                <div className='absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[120px]' />
+            </div>
+
+            <button className='relative z-10 mb-8 flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition' onClick={() => navigate("/")}>
+                <ArrowLeft size={16} />
+                Back
+            </button>
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="relative z-10 max-w-4xl mx-auto text-center mb-14"
+            >
+                <h1 className='text-4xl md:text-5xl font-bold mb-4'> Simple, transparent pricing</h1>
+                <p className='text-zinc-400 text-lg'> Buy credits once. Build anytime.</p>
+            </motion.div>
+
+            <div className='relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
+                {plans.map((p, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.12 }}
+                        whileHover={{ y: -14, scale: 1.03 }}
+                        className={`relative rounded-3xl p-8 border backdrop-blur-xl transition-all
+              ${p.popular
+                                ? "border-indigo-500 bg-gradient-to-b from-indigo-500/20 to-transparent shadow-2xl shadow-indigo-500/30"
+                                : "border-white/10 bg-white/5 hover:border-indigo-400 hover:bg-white/10"
+                            }`}
+                    >
+                        {p.popular && (
+                            <span className='absolute top-5 right-5 px-3 py-1 text-xs rounded-full bg-indigo-500'>Most Popular</span>
+                        )}
+
+                        <h1 className='text-xl font-semibold mb-2'>{p.name}</h1>
+                        <p className='text-zinc-400 text-sm mb-6'>{p.description}</p>
+                        <div className='flex items-end gap-1 mb-4'>
+                            <span className='text-4xl font-bold'>{p.price}</span>
+                            <span className='text-sm text-zinc-400 mb-1'>/one-time</span>
+                        </div>
+
+                        <div className='flex items-center gap-2 mb-8'>
+                            <Coins size={18} className='text-yellow-400' />
+                            <span className='font-semibold'>{p.credits} Credits</span>
+                        </div>
+
+                        <ul className='space-y-3 mb-10'>
+                            {p.features.map((f) => (
+                                <li
+                                    key={f}
+                                    className='flex items-center gap-2 text-sm text-zinc-300'
+                                >
+                                    <Check size={16} className='text-green-400' />
+                                    {f}
+                                </li>
+                            ))}
+                        </ul>
+
+
+                        <motion.button
+                            whileTap={{ scale: 0.96 }}
+                            disabled={loading}
+                            onClick={()=>handleBuy(p.key)}
+                            className={`w-full py-3 rounded-xl font-semibold transition
+                              ${p.popular
+                                    ? "bg-indigo-500 hover:bg-indigo-600"
+                                    : "bg-white/10 hover:bg-white/20"
+                                } disabled:opacity-60`}
+                        >
+                            {loading===p.key?"Redirecting...":p.button}
+
+
+                        </motion.button>
+
+
+                    </motion.div>
+                ))}
+            </div>
+
+
+        </div>
+    )
+}
+
+export default Pricing
+</file>
+
+<file path="client/src/redux/store.js">
+import { configureStore } from '@reduxjs/toolkit'
+import userSlice from "./userSlice"
+export const store=configureStore({
+    reducer:{
+      user:userSlice
+    }
+})
+</file>
+
+<file path="client/src/redux/userSlice.js">
+import { createSlice } from "@reduxjs/toolkit";
+
+const userSlice=createSlice({
+    name:"user",
+    initialState:{
+        userData:null
+    },
+    reducers:{
+        setUserData:(state,action)=>{
+          state.userData=action.payload
+        }
+    }
+
+})
+
+export const {setUserData}=userSlice.actions
+export default userSlice.reducer
+</file>
+
+<file path="client/src/App.jsx">
+import React from 'react'
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
+import Home from './pages/Home'
+import useGetCurrentUser from './hooks/useGetCurrentUser'
+import { useSelector } from 'react-redux'
+import Dashboard from './pages/Dashboard'
+import Generate from './pages/Generate'
+import WebsiteEditor from './pages/Editor'
+import LiveSite from './pages/LiveSite'
+import Pricing from './pages/Pricing'
+
+export const serverUrl="http://localhost:8000"
+function App() {
+  useGetCurrentUser()
+  const {userData}=useSelector(state=>state.user)
+  return (
+   <BrowserRouter>
+   <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/dashboard' element={userData?<Dashboard/>:<Home/>}/>
+     <Route path='/generate' element={userData?<Generate/>:<Home/>}/>
+     <Route path='/editor/:id' element={userData?<WebsiteEditor/>:<Home/>}/>
+      <Route path='/site/:id' element={<LiveSite/>}/>
+       <Route path='/pricing' element={<Pricing/>}/>
+   </Routes>
+   </BrowserRouter>
+  )
+}
+
+export default App
+</file>
+
+<file path="client/src/firebase.js">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import {getAuth, GoogleAuthProvider} from "firebase/auth"
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey:import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: "genwebai-dbb06.firebaseapp.com",
+  projectId: "genwebai-dbb06",
+  storageBucket: "genwebai-dbb06.firebasestorage.app",
+  messagingSenderId: "991900800026",
+  appId: "1:991900800026:web:84b905ccab6e1ea2c16da3"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth= getAuth(app)
+const provider=new GoogleAuthProvider()
+
+export {auth,provider}
+</file>
+
+<file path="client/src/index.css">
+@import "tailwindcss";
+</file>
+
+<file path="client/src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { Provider } from 'react-redux'
+import { store } from './redux/store.js'
+createRoot(document.getElementById('root')).render(
+ <Provider store={store}>
+   <App />
+ </Provider>
+  
+)
+</file>
+
+<file path="client/.gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+</file>
+
+<file path="client/eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="client/index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>client</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="client/package.json">
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@reduxjs/toolkit": "^2.11.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "axios": "^1.13.5",
+    "firebase": "^12.9.0",
+    "lucide-react": "^0.563.0",
+    "motion": "^12.34.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.13.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.3.1"
+  }
+}
+</file>
+
+<file path="client/README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="client/vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(),tailwindcss(),],
+})
+</file>
+
+<file path="server/config/db.js">
+import mongoose from "mongoose"
+
+const connectDb=async ()=>{
+    try {
+        await mongoose.connect(process.env.MONGODB_URL)
+        console.log("db connected")
+    } catch (error) {
+        console.log("db error")
+    }
+}
+
+export default connectDb
+</file>
+
+<file path="server/config/openRouter.js">
+const openRouterUrl = "https://openrouter.ai/api/v1/chat/completions"
+const model = "deepseek/deepseek-chat"
+
+export const generateResponse = async (prompt) => {
+    const res = await fetch(openRouterUrl, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            model: model,
+            messages: [
+                { role: "system", content: "You must return ONLY valid raw JSON." }
+                ,
+                {
+                    role: 'user',
+                    content: prompt,
+                },
+            ],
+            temperature:0.2
+        }),
+    });
+
+if(!res.ok){
+    const err=await res.text()
+    throw new Error("openRouter err"+err)
+}
+
+const data=await res.json()
+return data.choices[0].message.content
+
+}
+</file>
+
+<file path="server/config/plan.js">
+export const PLANS = {
+  free: {
+    price: 0,
+    credits: 100,
+    plan: "free",
+  },
+  pro: {
+    price: 499,
+    credits: 500,
+    plan: "pro",
+  },
+  enterprise: {
+    price: 1499,
+    credits: 1000,
+    plan: "enterprise",
+  },
+};
+</file>
+
+<file path="server/config/stripe.js">
+import dotenv from "dotenv"
+dotenv.config()
+import Stripe from "stripe"
+const stripe=new Stripe(process.env.STRIPE_SECRET_KEY)
+export default stripe
+</file>
+
+<file path="server/controllers/auth.controller.js">
+import User from "../models/user.model.js"
+import jwt from "jsonwebtoken"
+export const googleAuth=async (req,res)=>{
+try {
+    const {name,email,avatar}=req.body
+    if(!email){
+        return res.status(400).json({
+            message:"email is required"
+        })
+    }
+    const user=await User.findOne({email})
+    if(!user){
+      user=await User.create({name,email,avatar})
+    }
+    const token=await jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"})
+
+    res.cookie("token",token,{
+        httpOnly:true,
+        secure:false,
+        sameSite:"strict",
+        maxAge:7*24*60*60*1000
+    })
+
+    return res.status(200).json(user)
+} catch (error) {
+    
+    return res.status(500).json({message:`google auth error ${error}`})
+}
+}
+
+
+export const logOut=async (req,res)=>{
+try {
+     res.clearCookie("token",{
+        httpOnly:true,
+        secure:false,
+        sameSite:"strict"
+    })
+
+    return res.status(200).json({message :"log out successfully"})
+} catch (error) {
+    return res.status(500).json({message:`log out error ${error}`})
+}
+}
+</file>
+
+<file path="server/controllers/billing.controller.js">
+import { PLANS } from "../config/plan.js"
+import stripe from "../config/stripe.js"
+
+export const billing=async (req,res)=>{
+try {
+    const {planType}=req.body
+    const userId=req.user._id
+    const plan=PLANS[planType]
+    if(!plan || plan.price==0){
+        return res.status(400).json({message:"invalid paid plan"})
+    }
+   const session=await stripe.checkout.sessions.create({
+    mode:"payment",
+    payment_method_types:["card"],
+    line_items:[
+      {
+        price_data:{
+            currency:"inr",
+            product_data:{
+              name:`Genweb.ai ${planType.toUpperCase()} plan`  
+            },
+            unit_amount:plan.price*100
+        },
+        quantity:1
+      }  
+    ],
+
+    metadata:{
+        userId:userId.toString(),
+        credits:plan.credits,
+        plan:plan.plan
+    },
+    success_url:`${process.env.FRONTEND_URL}/`,
+    cancel_url:`${process.env.FRONTEND_URL}/pricing`
+
+   })
+
+   return res.status(200).json({
+    sessionUrl:session.url
+   })
+
+
+} catch (error) {
+    console.log(error)
+    return res.status(500).json({message:`billing error: ${error}`})
+}
+}
+</file>
+
+<file path="server/controllers/stripeWebhook.controller.js">
+import stripe from "../config/stripe.js";
+import User from "../models/user.model.js";
+
+export const stripeWebhook=async (req,res) => {
+    const sig=req.headers["stripe-signature"]
+    let event;
+    try {
+        event=stripe.webhooks.constructEvent(
+        req.body,
+        sig,
+        process.env.STRIPE_WEBHOOK_SECRET
+        )
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({message:"webhook error"})
+    }
+
+    if(event.type=="checkout.session.completed"){
+const session=event.data.object
+const userId=session.metadata.userId
+const credits=Number(session.metadata.credits)
+const plan=session.metadata.plan
+
+await User.findByIdAndUpdate(userId,{
+    $inc:{credits},
+    plan
+})
+    }
+
+    return res.json({received:true})
+
+
+}
+</file>
+
+<file path="server/controllers/user.controllers.js">
+import { generateResponse } from "../config/openRouter.js"
+import extractJson from "../utils/extractJson.js"
+
+export const getCurrentUser=async (req,res)=>{
+    try {
+        if(!req.user){
+            return res.json({user:null})
+        }
+        return res.json(req.user)
+    } catch (error) {
+        return res.status(500).json({message:`get current user error ${error}`})
+    }
+}
+</file>
+
+<file path="server/controllers/website.controllers.js">
+import { generateResponse } from "../config/openRouter.js";
+import User from "../models/user.model.js";
+import Website from "../models/website.model.js";
+import extractJson from "../utils/extractJson.js";
+
+const masterPrompt = `
+YOU ARE A PRINCIPAL FRONTEND ARCHITECT
+AND A SENIOR UI/UX ENGINEER
+SPECIALIZED IN RESPONSIVE DESIGN SYSTEMS.
+
+YOU BUILD HIGH-END, REAL-WORLD, PRODUCTION-GRADE WEBSITES
+USING ONLY HTML, CSS, AND JAVASCRIPT
+THAT WORK PERFECTLY ON ALL SCREEN SIZES.
+
+THE OUTPUT MUST BE CLIENT-DELIVERABLE WITHOUT ANY MODIFICATION.
+
+❌ NO FRAMEWORKS
+❌ NO LIBRARIES
+❌ NO BASIC SITES
+❌ NO PLACEHOLDERS
+❌ NO NON-RESPONSIVE LAYOUTS
+
+--------------------------------------------------
+USER REQUIREMENT:
+{USER_PROMPT}
+--------------------------------------------------
+
+GLOBAL QUALITY BAR (NON-NEGOTIABLE)
+--------------------------------------------------
+- Premium, modern UI (2026–2027)
+- Professional typography & spacing
+- Clean visual hierarchy
+- Business-ready content (NO lorem ipsum)
+- Smooth transitions & hover effects
+- SPA-style multi-page experience
+- Production-ready, readable code
+
+--------------------------------------------------
+RESPONSIVE DESIGN (ABSOLUTE REQUIREMENT)
+--------------------------------------------------
+THIS WEBSITE MUST BE FULLY RESPONSIVE.
+
+YOU MUST IMPLEMENT:
+
+✔ Mobile-first CSS approach
+✔ Responsive layout for:
+  - Mobile (<768px)
+  - Tablet (768px–1024px)
+  - Desktop (>1024px)
+
+✔ Use:
+  - CSS Grid / Flexbox
+  - Relative units (%, rem, vw)
+  - Media queries
+
+✔ REQUIRED RESPONSIVE BEHAVIOR:
+  - Navbar collapses / stacks on mobile
+  - Sections stack vertically on mobile
+  - Multi-column layouts become single-column on small screens
+  - Images scale proportionally
+  - Text remains readable on all devices
+  - No horizontal scrolling on mobile
+  - Touch-friendly buttons on mobile
+
+IF THE WEBSITE IS NOT RESPONSIVE → RESPONSE IS INVALID.
+
+--------------------------------------------------
+IMAGES (MANDATORY & RESPONSIVE)
+--------------------------------------------------
+- Use high-quality images ONLY from:
+  https://images.unsplash.com/
+- EVERY image URL MUST include:
+  ?auto=format&fit=crop&w=1200&q=80
+
+- Images must:
+  - Be responsive (max-width: 100%)
+  - Resize correctly on mobile
+  - Never overflow containers
+
+--------------------------------------------------
+TECHNICAL RULES (VERY IMPORTANT)
+--------------------------------------------------
+- Output ONE single HTML file
+- Exactly ONE <style> tag
+- Exactly ONE <script> tag
+- NO external CSS / JS / fonts
+- Use system fonts only
+- iframe srcdoc compatible
+- SPA-style navigation using JavaScript
+- No page reloads
+- No dead UI
+- No broken buttons
+--------------------------------------------------
+SPA VISIBILITY RULE (MANDATORY)
+--------------------------------------------------
+- Pages MUST NOT be hidden permanently
+- If .page { display: none } is used,
+  then .page.active { display: block } is REQUIRED
+- At least ONE page MUST be visible on initial load
+- Hiding all content is INVALID
+
+
+--------------------------------------------------
+REQUIRED SPA PAGES
+--------------------------------------------------
+- Home
+- About
+- Services / Features
+- Contact
+
+--------------------------------------------------
+FUNCTIONAL REQUIREMENTS
+--------------------------------------------------
+- Navigation must switch pages using JS
+- Active nav state must update
+- Forms must have JS validation
+- Buttons must show hover + active states
+- Smooth section/page transitions
+
+--------------------------------------------------
+FINAL SELF-CHECK (MANDATORY)
+--------------------------------------------------
+BEFORE RESPONDING, ENSURE:
+
+1. Layout works on mobile, tablet, desktop
+2. No horizontal scroll on mobile
+3. All images are responsive
+4. All sections adapt properly
+5. Media queries are present and used
+6. Navigation works on all screen sizes
+7. At least ONE page is visible without user interaction
+
+IF ANY CHECK FAILS → RESPONSE IS INVALID
+
+--------------------------------------------------
+OUTPUT FORMAT (RAW JSON ONLY)
+--------------------------------------------------
+{
+  "message": "Short professional confirmation sentence",
+  "code": "<FULL VALID HTML DOCUMENT>"
+}
+
+--------------------------------------------------
+ABSOLUTE RULES
+--------------------------------------------------
+- RETURN RAW JSON ONLY
+- NO markdown
+- NO explanations
+- NO extra text
+- FORMAT MUST MATCH EXACTLY
+- IF FORMAT IS BROKEN → RESPONSE IS INVALID
+`;
+
+
+export const generateWebsite = async (req, res) => {
+    try {
+        const { prompt } = req.body
+        if (!prompt) {
+            return res.status(400).json({ message: "prompt is required" })
+        }
+        const user = await User.findById(req.user._id)
+
+        if (!user) {
+            return res.status(400).json({ message: "user not found" })
+        }
+        if (user.credits < 50) {
+            return res.status(400).json({ message: "you have not enough credits to generate a webiste" })
+        }
+
+        const finalPrompt = masterPrompt.replace("USER_PROMPT", prompt)
+        let raw = ""
+        let parsed = null
+        for (let i = 0; i < 2 && !parsed; i++) {
+            raw = await generateResponse(finalPrompt)
+            parsed = await extractJson(raw)
+
+            if (!parsed) {
+                raw = await generateResponse(finalPrompt + "\n\nRETURN ONLY RAW JSON.")
+                parsed = await extractJson(raw)
+            }
+
+        }
+
+        if (!parsed.code) {
+            console.log("ai returned invalid response", raw)
+            return res.status(400).json({ message: "ai returned invalid response" })
+        }
+
+        const website = await Website.create({
+            user: user._id,
+            title: prompt.slice(0, 60),
+            latestCode: parsed.code,
+            conversation: [
+                {
+                    role: "user",
+                    content: prompt
+                },
+                {
+                    role: "ai",
+                    content: parsed.message
+                }
+                
+            ]
+        })
+
+        user.credits = user.credits - 50
+        await user.save()
+
+        return res.status(201).json({
+            websiteId: website._id,
+            remainingCredits: user.credits
+        })
+
+    } catch (error) {
+        return res.status(500).json({ message: `generate website error ${error}` })
+    }
+}
+
+
+export const getWebsiteById = async (req, res) => {
+    try {
+        const website = await Website.findOne({
+            _id: req.params.id,
+            user: req.user._id
+        })
+
+        if (!website) {
+            return res.status(400).json({ message: "website not found" })
+        }
+        return res.status(200).json(website)
+    } catch (error) {
+        return res.status(500).json({ message: `get website by id error ${error}` })
+    }
+}
+
+
+export const changes = async (req, res) => {
+    try {
+        const { prompt } = req.body
+        if (!prompt) {
+            return res.status(400).json({ message: "prompt is required" })
+        }
+
+        const website = await Website.findOne({
+            _id: req.params.id,
+            user: req.user._id
+        })
+
+        if (!website) {
+            return res.status(400).json({ message: "website not found" })
+        }
+
+        const user = await User.findById(req.user._id)
+
+        if (!user) {
+            return res.status(400).json({ message: "user not found" })
+        }
+        if (user.credits < 25) {
+            return res.status(400).json({ message: "you have not enough credits to generate a webiste" })
+        }
+
+        const updatePrompt = `
+UPDATE THIS HTML WEBSITE.
+
+CURRENT CODE:
+${website.latestCode}
+
+USER REQUEST:
+${prompt}
+
+RETURN RAW JSON ONLY:
+{
+  "message": "Short confirmation",
+  "code": "<UPDATED FULL HTML>"
+}
+`
+        let raw = ""
+        let parsed = null
+        for (let i = 0; i < 2 && !parsed; i++) {
+            raw = await generateResponse(updatePrompt)
+            parsed = await extractJson(raw)
+
+            if (!parsed) {
+                raw = await generateResponse(updatePrompt + "\n\nRETURN ONLY RAW JSON.")
+                parsed = await extractJson(raw)
+            }
+
+        }
+
+        if (!parsed.code) {
+            console.log("ai returned invalid response", raw)
+            return res.status(400).json({ message: "ai returned invalid response" })
+        }
+
+
+        website.conversation.push(
+            { role: "user", content: prompt },
+            { role: "ai", content: parsed.message },
+        )
+
+        website.latestCode = parsed.code
+
+        await website.save()
+        user.credits = user.credits - 25
+        await user.save()
+
+        return res.status(200).json({
+            message:parsed.message,
+            code:parsed.code,
+            remainingCredits: user.credits
+        })
+
+
+    } catch (error) {
+        console.log(error)
+ return res.status(500).json({ message: `update website error ${error}` })
+    }
+}
+
+
+
+export const getAll=async (req,res) => {
+    try {
+        const websites=await Website.find({user:req.user._id})
+        return res.status(200).json(websites)
+    } catch (error) {
+        return res.status(500).json({ message: `get all websites error ${error}` })
+    }
+}
+
+
+export const deploy=async (req,res)=>{
+    try {
+         const website = await Website.findOne({
+            _id: req.params.id,
+            user: req.user._id
+        })
+
+        if (!website) {
+            return res.status(400).json({ message: "website not found" })
+        }
+
+        if(!website.slug){
+            website.slug=website.title.toLowerCase().replace(/[^a-z0-9]/g,"").slice(0,60)+website._id.toString().slice(-5)              
+        }
+
+        website.deployed=true
+        website.deployUrl=`${process.env.FRONTEND_URL}/site/${website.slug}`
+        await website.save()
+
+        return res.status(200).json({
+            url:website.deployUrl
+        })
+
+    } catch (error) {
+         return res.status(500).json({ message: `deploy website error ${error}` })
+    }
+}
+
+
+export const getBySlug=async (req,res) => {
+    try {
+         const website = await Website.findOne({
+            slug: req.params.slug
+        })
+
+        if (!website) {
+            return res.status(400).json({ message: "website not found" })
+        }
+          return res.status(200).json(website)
+    } catch (error) {
+        return res.status(500).json({ message: `get by slug website error ${error}` })
+    }
+}
+</file>
+
+<file path="server/middlewares/isAuth.js">
+import jwt from "jsonwebtoken"
+import User from "../models/user.model.js"
+const isAuth=async (req,res,next)=>{
+try {
+    const token=req.cookies.token
+    if(!token){
+        return res.status(400).json({message:"token not found"})
+    }
+     const decoded=jwt.verify(token,process.env.JWT_SECRET)
+     req.user=await User.findById(decoded.id)
+     next()
+} catch (error) {
+    return res.status(500).json({message:"invalid token"})
+}
+}
+
+export default isAuth
+</file>
+
+<file path="server/models/user.model.js">
+import mongoose from "mongoose";
+
+const userSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        unique:true,
+        required:true
+    },
+    avatar:{
+        type:String
+    },
+    credits:{
+        type:Number,
+        default:100,
+        min:0
+    },
+    plan:{
+        type:String,
+        enum:["free","pro","enterprise"],
+        default:"free"
+    }
+},{timestamps:true})
+
+const User=mongoose.model("User",userSchema)
+export default User
+</file>
+
+<file path="server/models/website.model.js">
+import mongoose from "mongoose";
+
+const messageSchema=new mongoose.Schema({
+    role:{
+        type:String,
+        enum:["ai","user"],
+        required:true
+    },
+    content:{
+        type:String,
+        required:true
+    }
+},{timestamps:true})
+
+
+const websiteSchema=new mongoose.Schema({
+
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User",
+        required:true
+    },
+    title:{
+        type:String,
+        default:"Untitled Website"
+    },
+    latestCode:{
+        type:String,
+        required:true
+    },
+    conversation:[
+        messageSchema
+    ],
+    deployed:{
+        type:Boolean,
+        default:false
+    },
+    deployUrl:{
+        type:String,
+    },
+    slug:{
+        type:String,
+        unique:true,
+        sparse: true,
+    }
+
+},{timestamps:true})
+
+const Website=mongoose.model("Website",websiteSchema)
+export default Website
+</file>
+
+<file path="server/routes/auth.routes.js">
+import express from "express"
+import { googleAuth, logOut } from "../controllers/auth.controller.js"
+
+const authRouter=express.Router()
+
+authRouter.post("/google",googleAuth)
+authRouter.get("/logout",logOut)
+
+export default authRouter
+</file>
+
+<file path="server/routes/billing.routes.js">
+import express from "express"
+
+import isAuth from "../middlewares/isAuth.js"
+import { billing } from "../controllers/billing.controller.js"
+
+
+const billingRouter=express.Router()
+
+billingRouter.post("/",isAuth,billing)
+
+
+export default billingRouter
+</file>
+
+<file path="server/routes/user.routes.js">
+import express from "express"
+import {  getCurrentUser } from "../controllers/user.controllers.js"
+import isAuth from "../middlewares/isAuth.js"
+
+
+const userRouter=express.Router()
+
+userRouter.get("/me",isAuth,getCurrentUser)
+
+
+export default userRouter
+</file>
+
+<file path="server/routes/website.routes.js">
+import express from "express"
+
+import isAuth from "../middlewares/isAuth.js"
+import { changes, deploy, generateWebsite, getAll, getBySlug, getWebsiteById } from "../controllers/website.controllers.js"
+
+
+const websiteRouter=express.Router()
+
+websiteRouter.post("/generate",isAuth,generateWebsite)
+websiteRouter.post("/update/:id",isAuth,changes)
+websiteRouter.get("/get-by-id/:id",isAuth,getWebsiteById)
+websiteRouter.get("/get-all",isAuth,getAll)
+websiteRouter.get("/deploy/:id",isAuth,deploy)
+websiteRouter.get("/get-by-slug/:slug",getBySlug)
+
+export default websiteRouter
+</file>
+
+<file path="server/utils/extractJson.js">
+const extractJson = async (text) => {
+    if (!text) {
+        return
+    }
+    const cleaned = text.
+         replace(/```json/gi, "")
+        .replace(/```/g, "")
+        .trim();
+
+        const firstBrace=cleaned.indexOf('{')
+        const closeBrace=cleaned.lastIndexOf('}')
+        if(firstBrace===-1 || closeBrace==-1)return null
+        const jsonString=cleaned.slice(firstBrace,closeBrace+1)
+        return JSON.parse(jsonString)
+
+}
+export default extractJson
+</file>
+
+<file path="server/.gitignore">
+.env
+</file>
+
+<file path="server/index.js">
+import express from "express"
+import dotenv from "dotenv"
+dotenv.config()
+import connectDb from "./config/db.js"
+import authRouter from "./routes/auth.routes.js"
+import cookieParser from "cookie-parser"
+import cors from "cors"
+import userRouter from "./routes/user.routes.js"
+import websiteRouter from "./routes/website.routes.js"
+import billingRouter from "./routes/billing.routes.js"
+import { stripeWebhook } from "./controllers/stripeWebhook.controller.js"
+
+const app=express()
+
+app.post("/api/stripe/webhook",express.raw({type:"application/json"}),stripeWebhook)
+const port=process.env.PORT || 5000
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors({
+    origin:"http://localhost:5173",
+    credentials:true
+}))
+app.use("/api/auth",authRouter)
+app.use("/api/user",userRouter)
+app.use("/api/website",websiteRouter)
+app.use("/api/billing",billingRouter)
+
+
+app.listen(port,()=>{
+    console.log("server started")
+    connectDb()
+})
+</file>
+
+<file path="server/package.json">
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.0",
+    "nodemon": "^3.1.11",
+    "stripe": "^20.3.1"
+  }
+}
+</file>
+
+</files>
